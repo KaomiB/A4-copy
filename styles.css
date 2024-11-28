@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inconsolata:wght@300&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* Add at top of styles.css */
+@font-face {
+    font-family: 'GohuFont';
+    src: url('GohuFont11NerdFont-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NotoEmoji';
+    src: url('NotoEmoji-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto';
+    src: url('NotoSansNerdFont-Thin.ttf') format('truetype');
+}
+@font-face {
+    font-family: '3270';
+    src: url('3270NerdFont-Regular.ttf') format('truetype');
+}
+}
+@font-face {
+    font-family: '3270m';
+    src: url('3270NerdFontMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Material';
+    src: url('MaterialSymbolsOutlined[FILL\,GRAD\,opsz\,wght].ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Iosevka';
+    src: url('IosevkaNerdFont-ExtraLight.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'IosevkaTerm';
+    src: url('IosevkaTermNerdFont-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'M+1Code';
+    src: url('M+1CodeNerdFont-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'BlexMono';
+    src: url('BlexMonoNerdFont-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SauceCodePro';
+    src: url('SauceCodeProNerdFont-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'VictorMono';
+    src: url('VictorMonoNerdFontPropo-Thin.ttf') format('truetype');
+}
+
+body {
+    font-family: 'GohuFont', 'Noto', 'Material', '3270m', 'NotoEmoji', 'Iosevka', 'IosevkaTerm', 'M+1Code', 'BlexMono', 'BigBlueTerm437', 'SauceCodePro', 'VictorMono', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+google-fonts{
+    font-family: 'Inconsolata', 'Inter', 'Abel', 'Cormorant Garamond', 'DM Sans', 'Montserrat', 'Playfair Display', 'Poppins', 'Raleway', 'Spectral', sans-serif;
+    font-family: 'Cormorant Garamond', 'Playfair Display', 'Spectral', serif;
+
+}
+
+local-fonts{
+    font-family: 'GohuFont', 'Noto', 'Material', '3270m', 'NotoEmoji', 'Iosevka', 'IosevkaTerm', 'M+1Code', 'BlexMono', 'BigBlueTerm437', 'SauceCodePro', 'VictorMono', sans-serif;
+
+}
+
+
+* {
+    font-family: 'Montserrat', 'GohuFont', 'Noto', 'NotoEmoji', sans-serif;
+}
+
+:root {
+    --bg-color: #d7ccc8;
+    --text-color: #3e2723;
+    --button-bg-color: #a1887f;
+    --button-text-color: #3e2723;
+    --calendar-header-bg-color:  #a1887f;
+    --calendar-header-text-color:
+    --suggestion-bg-color: #d7ccc8;
+    --suggestion-text-color: #3e2723;
+}
+
+[data-theme="dark"] {
+    --bg-color: #3e2723;
+    --text-color: #d7ccc8;
+    --button-bg-color: #5d4037;
+    --button-text-color: #d7ccc8;
+    --calendar-header-bg-color: #5d4037;
+    --calendar-header-text-color: ##d7ccc8;
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+}
+#theme-toggle:hover {
+    transform: scale(1.2);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family:'Iosevka', 'Playfair Display', 'Cormorant Garamond', 'Spectral', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: block;
+}
+.section {
+    flex: 1;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 5px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: #efebe9; /* Muted earthy color */
+    color: #3e2723; /* Readable dark color */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+.modal-content input, 
+.modal-content textarea, 
+.modal-content select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.modal-content input:hover{
+    filter:brightness(0.9);
+}
+
+
+.modal-content select:hover{
+    filter:brightness(0.9);
+}
+
+.calendar-container {
+    text-align: center;
+}
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: var(--calendar-header-bg-color);
+    color: var(--calendar-header-text-color, #3e2723);
+    padding: 10px 0;
+    font-family: '3270', 'Noto', sans-serif;
+}
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.tag-input-container {
+    position: relative; /* Add this to contain the suggestions */
+    margin-bottom: 20px;
+}
+
+.tag-input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-height: 40px;
+    align-items: center;
+}
+
+.tag-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 15px;
+    font-size: 14px;
+    margin-right: 5px;
+    cursor: default;
+}
+
+.tag .remove-tag {
+    margin-left: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.tag .remove-tag:hover {
+    opacity: 1;
+}
+
+#tagInput {
+    border: none;
+    outline: none;
+    padding: 5px;
+    flex-grow: 1;
+    min-width: 60px;
+}
+
+.tag-suggestions {
+    position: absolute;
+    background: var(--button-bg-color);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-height: 150px;
+    overflow-y: auto;
+    width: calc(100% - .1px); /* Adjust width to account for borders */
+    left: 0; /* Align with container */
+    right: 0; /* Align with container */
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tag-suggestion {
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    max-width: calc(100% - 40px); /* Ensure it doesn't exceed the modal width */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.tag-suggestion:hover {
+   filter:brightness(0.9);
+}
+
+.color-preview {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.tag-color-picker {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.color-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.color-option {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.2s;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.color-option.selected {
+    border-color: #2d3436;
+}
+.month-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.month-nav button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: '3270', 'Noto', sans-serif;
+}
+
+.month-nav button:hover {
+    filter: brightness(0.9);
+}
+
+#taskListContainer {
+    max-height: 300px;
+    overflow-y: auto;
+}
+#taskListContainer > div {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px;
+}
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+#addTaskBtn {
+    background-color: #aa421c; 
+    color: white; 
+    font-size: 16px; /* Increase font size */
+}
+
+#addTaskBtn:hover {
+    filter: brightness(0.9); /* Darken the color by 10% */
+}
+
+#cancelTaskBtn {
+    font-size: 16px;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    outline: 1px solid white; 
+}
+
+#cancelTaskBtn:hover {
+    filter: brightness(0.9); /* Darken the color by 10% */
+
+}
+
+
+.task-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 5px 0;
+}
+
+.task-checkbox {
+    margin-right: 10px;
+}
+
+.task-title.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.task-content {
+    display: flex;
+    flex-direction: column;
+    font-family: '3270', 'Noto', sans-serif;
+}
+
+.task-description {
+    display: none;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
+
+.task-title.collapsible {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.task-title.collapsible::after {
+    content: '▼'; /* Down arrow */
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.task-title.collapsible.collapsed::after {
+    content: '▲'; /* Up arrow */
+}
+
+.task-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-tags {
+    margin-top: 10px; /* Adjust margin to fit under description */
+    display: 
+}
+
+button, .modal-content, select, input, textarea {
+    font-family: inherit;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+}
+
+
+
+.modal-buttons button, button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    font-family: 'MaterialSymbolsOutlined', '3270', 'NotoEmoji', sans-serif; /* Ensure correct font */
+    cursor: pointer;
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 20px;
+
+
+}
+
+
+.edit-btn:hover {
+    transform: scale(1.3);
+
+
+}
+
+.delete-btn {
+    font-family: 'MaterialSymbolsOutlined', '3270', 'NotoEmoji', sans-serif; /* Ensure correct font */
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 4px;
+    padding: 10px 15px;
+    display: inline-block;
+
+}
+
+
+.delete-btn:hover {
+    transform: scale(1.3);
+   
+}
+.calendar-day {
+    transition: all 0.2s ease;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+.calendar-day:hover {
+    transform: scale(1.1);
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+}
+
+.calendar-day:active {
+    transform: scale(0.95);
+}
+
+.calendar-day.has-tasks {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+}
+
+/* Style dropdown focus state */
+select:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--button-bg-color);
+    border-color: var(--button-bg-color);
+}
+
+
