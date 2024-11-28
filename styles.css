@@ -350,6 +350,16 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 16px; /* Increase font size */
 }
 
+#newTaskBtn {
+    padding: 15px;
+}
+
+#newTaskBtn:hover {
+    transform: scale(1.1);
+    filter:brightness(0.9);
+}
+
+
 #addTaskBtn:hover {
     filter: brightness(0.9); /* Darken the color by 10% */
 }
